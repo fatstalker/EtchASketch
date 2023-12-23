@@ -1,0 +1,18 @@
+.gridContainer {
+    border: solid black;
+    display: flex;
+    width: 40%;
+    height: 0;
+    padding-bottom: 40%;
+}
+
+.gridElement {
+    border:solid black;
+    width: 5%;
+    height: 0;
+    padding-bottom: 5%;
+}
+
+.gridRow {
+    display: flex;
+}

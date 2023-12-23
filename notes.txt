@@ -1,0 +1,5 @@
+reate grid element() = crea 1 div 
+create grid raw() =crea 16 divElement in grid container
+create grid column() = ripete 16 volte grid raw.
+
+in grid raw devo prima creare 1 div, poi inserirci i 16 div.

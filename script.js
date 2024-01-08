@@ -2,30 +2,30 @@ let gridContainer = document.querySelector('.gridContainer');
 let gridElement;
 let gridRow;
 
+create16xRow();
 
-createGridRow();
-//create16GridRow();
-
-function createGridElement() {
-    gridElement = document.createElement('div');
-    gridElement.classList.add('gridElement');
-    //test
-    gridElement.textContent = 'ciao';
-    gridContainer.appendChild(gridElement);
-};
-
-function createGridRow() {
-    gridRow = document.createElement('div');
-    gridRow.classList.add ('gridRow');
-    for (let i = 0; i < 16; i++) {
-        createGridElement();
+function createRow () {
+    for (let x = 0; x < 16; x++) {
+        gridElement = document.createElement('div');
+        gridElement.classList.add('gridElement');
+        gridElement.addEventListener('click', colorElement);
         gridRow.appendChild(gridElement);
+        gridContainer.appendChild(gridRow);     //temporary. set breackpoint at line 7 to follow elements creation
+
     };
 };
 
-function create16GridRow() {
-    for (let i = 0; i<16; i++) {
-        createGridRow();
+function create16xRow () {
+    for (let i = 0; i < 16; i++) {
+        gridRow = document.createElement('div');
+        gridRow.classList.add('gridRow');
+        createRow();
     };
+    colorElement(); 
+
+};
+
+function colorElement () {
+    gridElement.classList.add('color');
 };
 

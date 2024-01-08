@@ -1,18 +1,26 @@
 .gridContainer {
-    border: solid black;
+    border:  black;
+    border-width: 1px;
     display: flex;
-    width: 40%;
-    height: 0;
-    padding-bottom: 40%;
+    flex-direction: column;
+    height: fit-content;
+    
 }
 
 .gridElement {
-    border:solid black;
-    width: 5%;
-    height: 0;
-    padding-bottom: 5%;
+    display: flex;
+    border: solid black;
+    padding-bottom: 3%;
+    border-width: 1px;
+    width: 3%;
+    height: 3%;
+    
 }
 
 .gridRow {
     display: flex;
+}
+
+.color {
+    background-color: aqua;
 }

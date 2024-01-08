@@ -8,7 +8,6 @@ function createRow () {
     for (let x = 0; x < 16; x++) {
         gridElement = document.createElement('div');
         gridElement.classList.add('gridElement');
-        gridElement.addEventListener('click', colorElement);
         gridRow.appendChild(gridElement);
         gridContainer.appendChild(gridRow);     //temporary. set breackpoint at line 7 to follow elements creation
 
@@ -20,12 +19,16 @@ function create16xRow () {
         gridRow = document.createElement('div');
         gridRow.classList.add('gridRow');
         createRow();
+        
     };
-    colorElement(); 
-
+    colorElement();
 };
+
 
 function colorElement () {
-    gridElement.classList.add('color');
+    let prova = document.querySelectorAll('.gridElement');
+    prova = Array.from(prova);
+    for (let i = 0; i < prova.length; i++) {
+        prova[i].addEventListener('mouseenter', () => {prova[i].classList.add('color')});
+    }
 };
-

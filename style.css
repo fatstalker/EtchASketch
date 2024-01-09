@@ -62,6 +62,9 @@
     font-size: 50px;
     margin: 20px;
     min-width: 250px;
+    font-family: 'FLAMENGO2K21', sans-serif;
+    @import url('https://fonts.cdnfonts.com/css/flamengo2k21');
+
 }
 
 h1 {
@@ -103,3 +106,4 @@ body {
 .resize {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+

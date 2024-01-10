@@ -3,7 +3,7 @@ let gridElement;
 
 let gridRow;
 let selectedColor = 'blue';
-let gridSize = 16
+let gridSize = 16;
 
 let resizeButton = document.querySelector('.resize');
 resizeButton.addEventListener('click', setGridSize);
@@ -57,7 +57,7 @@ function createCellsListeners () {
     let cellToColor = document.querySelectorAll('.gridElement');
     cellToColor = Array.from(cellToColor);
     for (let i = 0; i < cellToColor.length; i++) {
-        cellToColor[i].addEventListener('pointermove', function(e) {
+        cellToColor[i].addEventListener('mouseover', function(e) {
             if (drawing) {
                 if (selectedColor == 'blue') {
                     cellToColor[i].style.opacity = '1';

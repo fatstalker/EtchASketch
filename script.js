@@ -102,14 +102,15 @@ function createCellsListeners () {
 };
 
 
+
+
 function setGridSize(gridElementsToRemove) {
     gridSize = parseInt( prompt('Enter a number between 4 and 100', '16'));
-    if (gridSize > 100 || gridSize < 4) {
-        alert('Invalid entry')
-    }
-    else {
+    if (gridSize <= 100 || gridSize >=4) {
         gridContainer.innerHTML = '';       //non so bene sta roba//
         create_n_GridRaw(gridSize);
     }
+    else {
+        alert('Invalid entry');
+    }
 };
-
